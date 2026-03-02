@@ -1,0 +1,37 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /api
+spring:
+  application:
+    name: x-picture-backend
+    #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/x_picture
+  #mybatis 配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    #仅在开发阶段打印日志 指定打印日志的类
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #指定逻辑删除字段
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+#接口文档配置  只在开发环境开启
+#http://localhost:8888/api/doc.html#/home
+knife4j:
+  enable: true
+  openapi:
+    title: 接口文档
+    version: 1.0
+    group:
+      test1:
+        group-name: 默认分组
+        api-rule: package #使用包分组 要按层分包不能按模块分
+        api-rule-resources:
+         - com.xz.xpicturebackend.controller
+
