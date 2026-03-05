@@ -29,8 +29,8 @@ knife4j:
     title: 接口文档
     version: 1.0
     group:
-      test1:
-        group-name: 默认分组
+      default:
+        # group-name:
         api-rule: package #使用包分组 要按层分包不能按模块分
         api-rule-resources:
          - com.xz.xpicturebackend.controller
