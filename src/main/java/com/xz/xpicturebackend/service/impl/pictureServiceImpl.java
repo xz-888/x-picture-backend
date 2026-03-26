@@ -3,7 +3,7 @@ package com.xz.xpicturebackend.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xz.xpicturebackend.mapper.PictureMapper;
 import com.xz.xpicturebackend.model.entity.Picture;
-import com.xz.xpicturebackend.service.pictureService;
+import com.xz.xpicturebackend.service.PictureService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 */
 @Service
 public class pictureServiceImpl extends ServiceImpl<PictureMapper, Picture>
-    implements pictureService{
+    implements PictureService{
 
 }
 
