@@ -1,9 +1,9 @@
 package com.xz.xpicturebackend.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xz.xpicturebackend.mapper.pictureMapper;
+import com.xz.xpicturebackend.mapper.PictureMapper;
+import com.xz.xpicturebackend.model.entity.Picture;
 import com.xz.xpicturebackend.service.pictureService;
-import com.xz.xpicturebackend.model.entity.picture;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 * @createDate 2026-03-14 21:30:57
 */
 @Service
-public class pictureServiceImpl extends ServiceImpl<pictureMapper, picture>
+public class pictureServiceImpl extends ServiceImpl<PictureMapper, Picture>
     implements pictureService{
 
 }
