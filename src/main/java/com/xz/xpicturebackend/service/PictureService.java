@@ -10,6 +10,7 @@ import com.xz.xpicturebackend.model.dto.picture.PictureUploadRequest;
 import com.xz.xpicturebackend.model.entity.Picture;
 import com.xz.xpicturebackend.model.entity.User;
 import com.xz.xpicturebackend.model.vo.PictureVO;
+import org.springframework.scheduling.annotation.Async;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -65,5 +66,8 @@ public interface PictureService extends IService<Picture> {
 
 
     QueryWrapper<Picture> getQueryWrapper(PictureQueryRequest pictureQueryRequest);
+
+    @Async
+    void clearPictureFile(Picture oldPicture);
 }
 
